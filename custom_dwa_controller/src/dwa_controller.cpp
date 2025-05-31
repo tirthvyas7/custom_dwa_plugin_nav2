@@ -319,7 +319,7 @@ double evaluateTrajectory(
   // Grab start, end, and goal
   const auto & start_pose = trajectory.front();
   const auto & end_pose   = trajectory.back();
-  const auto & goal_pose  = global_plan_.poses.size()>20 ? global_plan_.poses[20]:global_plan_.poses.back();
+  const auto & goal_pose  = global_plan_.poses[20];
 
   // 1) HEADING: compare end_yaw → bearing(end → goal)
   double end_yaw = tf2::getYaw(end_pose.pose.orientation);
